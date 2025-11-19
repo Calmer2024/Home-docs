@@ -1,0 +1,186 @@
+% !TEX program = xelatex
+% -*- coding: UTF-8 -*-
+
+\documentclass[UTF8, 11pt, a4paper]{ctexrep}
+
+% --- 基础宏包 ---
+\usepackage{geometry} % 用于设置页边距
+\geometry{left=1.8cm, right=1.8cm, top=2.5cm, bottom=2.5cm}
+\usepackage{graphicx}   % 用于插入图片
+\usepackage{booktabs}   % 用于创建更专业的三线表
+\usepackage{amsmath}    % 用于数学公式
+\usepackage{hyperref}   % 创建超链接，让PDF可交互
+\usepackage{tabularx}
+\usepackage{seqsplit}
+\usepackage{url}
+\usepackage[T1]{fontenc}
+\usepackage{subcaption}
+
+\usepackage{indentfirst}
+
+% --- 设置页眉页脚 ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % 清空所有页眉页脚
+\fancyhead[L]{\kaishu\nouppercase{\rightmark}} % 在页眉左侧放置当前节的标题 (粗体)
+\fancyfoot[R]{\thepage} % 在页脚右侧放置页码
+\renewcommand{\headrulewidth}{0.4pt} % 设置页眉下方的分隔线
+\renewcommand{\footrulewidth}{0pt}   % 去掉页脚上方的分隔线
+\renewcommand{\sectionmark}[1]{\markright{\thesection\quad#1}}
+
+% ===================================================================
+% --- 章节标题样式配置 (titlesec) ---
+% 调整 \section, \subsection 等的格式
+% ===================================================================
+\usepackage{titlesec}
+% \section 格式：居中、较大字号、粗体，与上下文有一定间距
+\titleformat{\section}{\normalfont\Large\bfseries\raggedright}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+% \subsection 格式：左对齐、大号、粗体
+\titleformat{\subsection}{\normalfont\large\bfseries\raggedright}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% \subsubsection 格式：左对齐、粗体
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+% ===================================================================
+% --- 超链接配置 (hyperref) ---
+% 使PDF内的引用、链接、URL可以点击，并设置为黑色
+% ===================================================================
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=black,
+    citecolor=black,
+    pdftitle={Apache HttpClient 设计模式深度分析报告},
+    pdfauthor={王卓},
+    % --- 修改结束 ---
+}
+
+% ===================================================================
+% --- 图表标题配置 (caption) ---
+% 模仿参考文档样式：标题在下方，标签粗体，使用冒号分隔
+% ===================================================================
+\usepackage{caption}
+\captionsetup{
+    position=bottom,
+    font=small,
+    labelfont=bf,
+    labelsep=colon, % 将分隔符从“点”改为“冒号”
+    justification=centering,
+    skip=10pt
+}
+
+% ===================================================================
+% --- 代码块高亮配置 (listings) ---
+% 使用现代、柔和的配色方案，并设置默认语言为 Java
+% ===================================================================
+\usepackage{listings}
+\usepackage{xcolor}
+
+% 1. 定义配色方案
+\definecolor{codeback}{HTML}{F8F8F8}      % 背景色 (极淡灰)
+\definecolor{codeframe}{HTML}{E0E0E0}     % 边框颜色 (淡灰)
+\definecolor{codenumber}{HTML}{A0A0A0}    % 行号颜色 (中灰)
+\definecolor{codekeyword}{HTML}{0000FF}   % 关键字颜色 (蓝色)
+\definecolor{codestring}{HTML}{A31515}    % 字符串颜色 (暗红)
+\definecolor{codecomment}{HTML}{228B22}   % 注释颜色 (森林绿)
+
+% 2. 定义 listings 样式 'mystyle'
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{codeback},
+    commentstyle=\itshape\color{codecomment},
+    keywordstyle=\color{codekeyword}\bfseries,
+    numberstyle=\small\color{codenumber},
+    stringstyle=\color{codestring},
+    basicstyle=\ttfamily\small,
+    frame=single,
+    rulecolor=\color{codeframe},
+    framerule=0.5pt,
+    framesep=10pt,
+    xleftmargin=5pt,
+    numbers=left,
+    numbersep=15pt, % 行号与代码的间距
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    language=Java % 默认高亮语言为Java
+}
+\lstset{style=mystyle} % 全局应用此样式
+
+
+% ===================================================================
+% --- 文档信息 ---
+% 这些信息将用于自动生成封面
+% ===================================================================
+\title{Apache HttpClient 设计模式深度分析报告}
+\author{王卓}
+\newcommand{\StudentID}{2023302141184} % 定义学号
+\newcommand{\School}{武汉大学} % 定义学校
+\newcommand{\College}{计算机学院} % 定义学院
+\date{2025年7月18日}
+
+% ===================================================================
+% --- 文档正文开始 ---
+% ===================================================================
+\begin{document}
+
+% --- 生成自定义封面 ---
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+
+    % --- Logo ---
+    % 请将您的 logo 文件 (例如 logo.png) 放在与 .tex 文件相同的目录下
+    % 如果没有logo，可以注释掉下面这行
+    % \includegraphics[width=0.3\textwidth]{logo.png} 
+    
+    \vspace{2cm}
+
+    % --- 报告主标题和副标题 ---
+    {\Huge\bfseries Apache HttpClient 设计模式深度分析报告}
+    
+    \vfill % 将下半部分内容推到底部
+    
+    % --- 作者与学校信息 ---
+    \large
+    \begin{tabular}{l l}
+        学\qquad 院： & 计算机学院 \\ % 您可以修改这里
+        \addlinespace[0.5cm]
+        姓\qquad 名： & 王卓 \\ % 自动从 \author 获取
+        \addlinespace[0.5cm]
+        学\qquad 号： & 2023302141184 \\ % 您可以修改这里
+    \end{tabular}
+    
+    \vspace{2cm}
+    
+    {\large \today} % 日期
+    
+\end{titlepage}
+
+
+% --- 生成目录 ---
+\tableofcontents
+\newpage
+
+% --- 引入各个章节 ---
+% 确保您的章节 .tex 文件与 main.tex 在同一目录或指定的 'sections' 子目录中
+\input{sections/part1_overview.tex}
+\input{sections/part2_summary.tex}
+\input{sections/part3_deep_analysis.tex}
+\input{sections/part4_conclusion.tex}
+\input{sections/part5.tex}
+
+
+
+\end{document}

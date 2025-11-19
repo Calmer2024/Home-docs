@@ -1,0 +1,15 @@
+ % 这个大括号里的内容是代码块的视觉标题
+/*
+ * 源码位置:
+ * httpclient/src/main/java/org/apache/http/client/HttpRequestRetryHandler.java
+ */
+public interface HttpRequestRetryHandler {
+    /**
+     * Determines if a method should be retried after an IOException.
+     * @return {@code true} if the method should be retried, {@code false} otherwise.
+     */
+    boolean retryRequest(
+            IOException exception,
+            int executionCount,
+            HttpContext context);
+}

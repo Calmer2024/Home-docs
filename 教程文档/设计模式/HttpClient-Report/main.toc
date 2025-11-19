@@ -1,0 +1,86 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}框架概述}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}框架背景与版本演进}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}核心组件概览与设计哲学}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}主要功能集与应用领域}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}研究动机与分析目标}{5}{section.1.4}%
+\contentsline {section}{\numberline {1.5}分析方法论与工具集}{5}{section.1.5}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}设计模式识别汇总}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}模式总览}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}完整设计模式清单}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}模式分类统计}{7}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}量化分析}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}各模式出现频次统计表}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}高频模式分析}{8}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}模块分布}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}核心模块模式分布特征}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}模式协作关系分析}{9}{subsection.2.3.2}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}重点模式深度分析}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}建造者模式：复杂对象构建的声明式范式}{11}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}模式定位}{11}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}UML类图解析}{11}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}具体应用场景深度剖析}{11}{subsection.3.1.3}%
+\contentsline {subsubsection}{场景：HttpClient实例的构建}{11}{subsection.3.1.3}%
+\contentsline {paragraph}{源码定位与功能分析}{11}{subsection.3.1.3}%
+\contentsline {paragraph}{模式识别与应用场景}{13}{subsection.3.1.3}%
+\contentsline {subsubsection}{关键代码片段与分析}{13}{subsection.3.1.3}%
+\contentsline {paragraph}{代码分析}{14}{lstnumber.3.1.30}%
+\contentsline {subsubsection}{通过测试用例分析模式优势}{14}{Item.2}%
+\contentsline {paragraph}{测试用例一：API的健壮性与流畅性验证}{14}{Item.2}%
+\contentsline {paragraph}{执行结果与分析}{15}{lstnumber.3.2.8}%
+\contentsline {paragraph}{测试用例二：状态隔离与产品不可变性验证}{15}{Item.4}%
+\contentsline {paragraph}{执行结果与分析}{16}{lstnumber.3.3.19}%
+\contentsline {paragraph}{角色映射与执行流分析}{16}{Item.6}%
+\contentsline {paragraph}{设计评价与替代方案对比}{16}{Item.6}%
+\contentsline {paragraph}{权衡与跨模式协作}{16}{Item.6}%
+\contentsline {section}{\numberline {3.2}策略模式：封装可变算法以实现运行时动态性}{16}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}模式定位}{16}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}UML类图解析}{17}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}具体应用场景深度剖析}{19}{subsection.3.2.3}%
+\contentsline {subsubsection}{场景：请求失败后的重试}{19}{subsection.3.2.3}%
+\contentsline {paragraph}{源码定位与功能分析}{19}{subsection.3.2.3}%
+\contentsline {paragraph}{模式识别与应用场景}{19}{subsection.3.2.3}%
+\contentsline {subsubsection}{关键代码片段与分析}{19}{subsection.3.2.3}%
+\contentsline {paragraph}{代码分析}{20}{lstnumber.3.5.19}%
+\contentsline {paragraph}{角色映射与执行流分析}{20}{Item.9}%
+\contentsline {paragraph}{设计评价与替代方案对比}{21}{Item.9}%
+\contentsline {paragraph}{权衡与跨模式协作}{21}{Item.9}%
+\contentsline {section}{\numberline {3.3}责任链模式：构建可扩展的请求处理管线}{21}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}模式定位}{21}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}UML类图解析}{22}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}具体应用场景深度剖析}{22}{subsection.3.3.3}%
+\contentsline {subsubsection}{场景：HTTP请求的完整执行流程}{22}{subsection.3.3.3}%
+\contentsline {paragraph}{源码定位与功能分析}{22}{subsection.3.3.3}%
+\contentsline {paragraph}{模式识别与应用场景}{23}{subsection.3.3.3}%
+\contentsline {subsubsection}{关键代码片段与分析}{23}{subsection.3.3.3}%
+\contentsline {paragraph}{代码分析}{24}{lstnumber.3.7.18}%
+\contentsline {subsubsection}{通过测试用例分析模式优势}{24}{Item.12}%
+\contentsline {paragraph}{测试用例：动态扩展请求处理流程}{24}{Item.12}%
+\contentsline {paragraph}{执行结果与分析}{25}{lstnumber.3.8.40}%
+\contentsline {paragraph}{角色映射与执行流分析}{26}{Item.15}%
+\contentsline {paragraph}{设计评价与替代方案对比}{26}{Item.15}%
+\contentsline {paragraph}{权衡与跨模式协作}{26}{Item.15}%
+\contentsline {section}{\numberline {3.4}工厂模式：解耦对象的创建与使用}{27}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}模式定位}{27}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}UML类图解析}{27}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}具体应用场景深度剖析}{28}{subsection.3.4.3}%
+\contentsline {subsubsection}{场景：为常见用例提供便捷的HttpClient实例}{28}{subsection.3.4.3}%
+\contentsline {paragraph}{源码定位与功能分析}{28}{subsection.3.4.3}%
+\contentsline {paragraph}{模式识别与应用场景}{28}{subsection.3.4.3}%
+\contentsline {subsubsection}{关键代码片段与分析}{28}{subsection.3.4.3}%
+\contentsline {paragraph}{代码分析}{29}{lstnumber.3.9.31}%
+\contentsline {paragraph}{角色映射与执行流分析}{30}{Item.18}%
+\contentsline {paragraph}{设计评价与替代方案对比}{30}{Item.18}%
+\contentsline {paragraph}{权衡与跨模式协作}{30}{Item.18}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}设计思想总结}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}框架整体的设计理念}{31}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}面向接口编程}{31}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}可扩展性与可配置性优先}{31}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}关注点分离}{32}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}设计模式应用的整体策略}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}组合优于继承}{32}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}用模式解决特定领域问题}{32}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}对软件架构的启发}{33}{section.4.3}%
+\contentsline {chapter}{\numberline {第五章\hspace {.3em}}学习心得与思考}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}学习过程中的收获}{35}{section.5.1}%
+\contentsline {section}{\numberline {5.2}遇到的困难与解决方法}{35}{section.5.2}%
+\contentsline {section}{\numberline {5.3}对设计模式实际应用的新认识}{36}{section.5.3}%
